@@ -18,24 +18,25 @@ const Input =() =>{
   const ageChangeHandler=(event)=>{
     setEnteredAge(event.target.value);
   }
+ 
     const SubmitHandler =(event)=>{
-        event.preventdefault();
-        
-        
+        event.preventDefault();
+        setEnteredAge('');
+        setEnteredName('');
         };
 
     return(
 <Card>
     <form onSubmit={SubmitHandler}>
         <div>
-<label >Name</label>
-<Inputstyle type='text'
+<label htmlFor="Name">Name</label>
+<Inputstyle id='Name'type='text'
 value={enteredName}
 onChange={nameChangeHandler}/>
         </div>
         <div>
-<label>Age</label>
-<Inputstyle type='number'
+<label htmlFor="Age">Age</label>
+<Inputstyle id='Age' type='number'
 value={enteredAge}
 onChange={ageChangeHandler}/>
         </div>
