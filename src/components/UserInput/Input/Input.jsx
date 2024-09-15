@@ -1,5 +1,5 @@
-
-import Button from "../UI/Button/Button";
+import Card from "../../UI/Card/Card";
+import Button from "../../UI/Button/Button";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -25,7 +25,7 @@ const Input =() =>{
         };
 
     return(
-<div>
+<Card>
     <form onSubmit={SubmitHandler}>
         <div>
 <label >Name</label>
@@ -41,7 +41,7 @@ onChange={ageChangeHandler}/>
         </div>
 <Button type='submit'>Add User</Button>
 </form>
-</div>
+</Card>
     );
 };
 
